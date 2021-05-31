@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Code Challenge</title>
+</head>
+<body>
+    <nav>
+        <label class="logo">Blogger</label>
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="btn-wrap">
+        <div id="add-btn">+ Add New</div>
+    </div>
+
+    <section class="blog-container">
+        <article class="blog-post" id="post1">
+            <span class="edit-btn" id="post1" onclick=openEditBox();>Edit</span>
+            <a href="javascript:;"><img src="https://image.freepik.com/free-photo/mascara-yellow-tube-with-open-brush-pink-yellow-sunglasses-with-fake-eyelashes_100886-256.jpg"></a>
+            <a href="javascript:;"><h3>Two of Your Fave Beauty Brands Teamed Up for This Mascara </h3></a>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis architecto natus non illum tenetur dolorem a reprehenderit quam deleniti officiis, ea eaque quasi culpa assumenda sequi, perspiciatis libero ullam quis.</p>
+        </article>  
+        <article class="blog-post" id="post2">
+            <span class="edit-btn" id="post2" onclick=openEditBox();>Edit</span>
+            <a href="javascript:;"><img src="https://image.freepik.com/free-photo/female-tourists-hand-have-happy-travel-map_1150-7411.jpg"></a>
+            <a href="javascript:;"><h3>The Essential Mobile Apps for Travelers</h3></a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque harum placeat itaque facere assumenda, animi dolorum aliquam voluptate temporibus aperiam earum consectetur dicta incidunt, nihil numquam quisquam illo odit tempore?</p>
+        </article> 
+        <article class="blog-post" id="post3">
+            <span class="edit-btn" id="post3" onclick=openEditBox();>Edit</span>
+            <a href="javascript:;"><img src="https://image.freepik.com/free-photo/salads-with-quinoa-arugula-radish-tomatoes-cucumber-bowl-wooden-background_2829-2395.jpg"></a>
+            <a href="javascript:;"><h3>The Best Quinoa Based Foods for Quinoa Lovers</h3></a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque harum placeat itaque facere assumenda, animi dolorum aliquam voluptate temporibus aperiam earum consectetur dicta incidunt, nihil numquam quisquam illo odit tempore?</p>
+        </article> 
+    </section>
+
+
+    <div id="add-box" >
+        <div id="add-content">
+            <h5>Add Article</h5>
+            <p>Image</p>
+            <input type="text" size="42" id="add-img" name="add-img" placeholder="https://..."  required>
+            <p>Title</p>
+            <input type="text" size="42" id="add-title" name="add-title" required>
+            <p>Content</p>
+            <textarea name="add-text" id="add-text" cols="42" rows="8" required></textarea>
+            <div class="btn-group">
+                <button type="submit" id="add-save-btn">Save</button>
+                <button  type="submit" id="add-cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="edit-box" >
+        <div id="edit-content">
+            <h5>Edit Article</h5>
+            <p>Image</p>
+            <input type="text" size="42" id="edit-img" name="edit-img" value="">
+            <p>Title</p>
+            <input type="text" size="42" id="edit-title" name="edit-title">
+            <p>Content</p>
+            <textarea name="edit-text" id="edit-text" cols="42" rows="8"></textarea>
+            <div class="btn-group">
+                <button id="edit-save-btn">Save</button>
+                <button id="edit-del-btn">Delete</button>
+                <button id="edit-cancel-btn">Cancel</button>
+                <input id="hidden-post-id" type="hidden" value="">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
